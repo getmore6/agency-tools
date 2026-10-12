@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Get More6 | More Booked Jobs for Detailers</title>
   <meta name="description" content="Get More6 helps mobile and auto detailing businesses across the US get more booked jobs with Meta ads and websites built to book.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,9 +50,10 @@
 
     /* Nav */
     header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-    nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .logo { font-family: "Archivo", sans-serif; font-weight: 900; font-size: 22px; letter-spacing: -.02em; }
-    .logo span { color: var(--accent); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+    .logo { display: flex; align-items: center; }
+    .logo img { height: 68px; width: auto; display: block; }
+    .foot-logo img { height: 64px; width: auto; display: block; margin-bottom: 8px; }
     .nav-links { display: flex; gap: 30px; font-size: 15px; color: var(--muted); }
     .nav-links a:hover { color: var(--ink); }
     nav .btn { padding: 10px 18px; font-size: 14px; }
@@ -157,7 +160,7 @@
 
   <header>
     <nav class="wrap">
-      <a href="#" class="logo">Get More<span>6</span></a>
+      <a href="#" class="logo"><img src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343"></a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#offer">Founding offer</a>
@@ -328,7 +331,7 @@
 
   <footer>
     <div class="wrap foot">
-      <span>© <span id="year"></span> Get More6. Marketing for detailers.</span>
+      <div class="foot-logo" style="display:block"><img src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343" loading="lazy"><span>© <span id="year"></span> Get More6. Marketing for detailers.</span></div>
       <div>
         <a href="mailto:getmore6marketing@gmail.com">getmore6marketing@gmail.com</a>
         <a href="https://www.instagram.com/gettmore6/" target="_blank" rel="noopener">Instagram</a>
