@@ -3,6 +3,7 @@
 - `index.html` — the Get More6 agency website.
 - `detailer-template/` — a ready-made website for detailing clients.
 - `detailing-leads.xlsx` — 50 detailer leads to contact.
+- `ads/` — Meta ad images and ad copy for Get More6.
 
 ## Make a website for a new detailer
 
@@ -19,6 +20,7 @@ Tips:
 
 ## Get More6 site settings
 
+- Live site: https://getmore6marketing.com (served by GitHub Pages from this repo, so pushing to `main` updates it)
 - Booking: every "Book a free call" button links to https://calendly.com/getmore6marketing/30min
 - Email: getmore6marketing@gmail.com
 - Instagram: https://www.instagram.com/gettmore6/
