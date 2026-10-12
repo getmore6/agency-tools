@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Get More6 | More Booked Jobs for Detailers</title>
-  <meta name="description" content="Get More6 helps mobile and auto detailing businesses across the US get more booked jobs with Meta ads and websites built to book.">
+  <title>Get More6 | Free 7-Day Trial for Detailers</title>
+  <meta name="description" content="Mobile detailers: try Get More6 free for 7 days. We run your Facebook and Instagram ads to get you more booked jobs. You only pay the ad spend.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ---- Brand tokens: blue, black and white ---- */
     :root {
@@ -20,149 +20,94 @@
       --muted: #a3abb8;
       --line: #22262e;
       --accent: #2f7bff;
-      --accent-ink: #ffffff;
       --radius: 16px;
-      --max: 1140px;
+      --max: 1080px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--bg); color: var(--ink);
-      line-height: 1.6; -webkit-font-smoothing: antialiased;
-    }
+    body { font-family: "Inter", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     h1, h2, h3 { font-family: "Archivo", system-ui, sans-serif; line-height: 1.05; letter-spacing: -.02em; }
     a { color: inherit; text-decoration: none; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
-    section { padding: 96px 0; }
-    .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 14px; }
-    .btn { display: inline-block; padding: 14px 24px; border-radius: 999px; font-weight: 600; font-size: 15px; transition: transform .15s, background .15s, border-color .15s; }
-    .btn-primary { background: var(--accent); color: var(--accent-ink); }
-    .btn-primary:hover { transform: translateY(-2px); background: #4a8dff; }
-    .btn-ghost { border: 1.5px solid var(--line); }
-    .btn-ghost:hover { border-color: var(--ink); }
-    .btn-white { background: #fff; color: #000; }
-    .btn-white:hover { transform: translateY(-2px); }
-    .section-head { max-width: 680px; margin-bottom: 52px; }
-    .section-head h2 { font-size: clamp(32px, 4.6vw, 54px); font-weight: 800; }
-    .section-head p { color: var(--muted); margin-top: 16px; font-size: 18px; }
+    section { padding: 88px 0; }
+    .center { text-align: center; }
+    .head { max-width: 680px; margin: 0 auto 44px; text-align: center; }
+    .head h2 { font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; }
+    .head p { color: var(--muted); margin-top: 14px; font-size: 18px; }
+    .logo-img { mix-blend-mode: lighten; display: block; height: auto; }
 
-    /* Nav */
-    header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-    nav { display: flex; align-items: center; justify-content: space-between; height: 104px; }
-    .logo { display: flex; align-items: center; }
-    .logo img { height: 92px; width: auto; display: block; }
-    .foot-logo img { height: 200px; width: auto; display: block; margin: 0 0 12px -14px; }
-    .nav-links { display: flex; gap: 30px; font-size: 15px; color: var(--muted); }
-    .nav-links a:hover { color: var(--ink); }
-    nav .btn { padding: 10px 18px; font-size: 14px; }
+    /* Header */
+    header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+    nav .logo-img { height: 72px; width: auto; }
+    .btn-sm { background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; padding: 11px 18px; border-radius: 999px; transition: background .15s; }
+    .btn-sm:hover { background: #4a8dff; }
+
+    /* Big trial button */
+    .btn-trial { display: block; width: 100%; max-width: 640px; margin: 0 auto; background: var(--accent); color: #fff; border: 0; border-radius: 18px; padding: 26px 20px; cursor: pointer; text-align: center; font: inherit; box-shadow: 0 18px 50px -12px rgba(47,123,255,.6); transition: transform .15s, background .15s; }
+    .btn-trial:hover { transform: translateY(-2px); background: #4a8dff; }
+    .btn-trial b { display: block; font-family: "Archivo", sans-serif; font-weight: 900; font-size: clamp(20px, 3vw, 28px); text-transform: uppercase; letter-spacing: .01em; line-height: 1.15; }
+    .btn-trial small { display: block; margin-top: 6px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; opacity: .9; }
 
     /* Hero */
-    .hero { padding: 104px 0 88px; position: relative; overflow: hidden; }
-    .hero::before {
-      content: ""; position: absolute; inset: -45% -15% auto auto; width: 760px; height: 760px;
-      background: radial-gradient(circle, rgba(47,123,255,.28), transparent 65%); pointer-events: none;
-    }
+    .hero { position: relative; overflow: hidden; padding: 56px 0 80px; text-align: center; }
+    .hero::before { content: ""; position: absolute; left: 50%; top: -420px; width: 1100px; height: 900px; transform: translateX(-50%); background: radial-gradient(circle, rgba(47,123,255,.28), transparent 62%); pointer-events: none; }
     .hero .wrap { position: relative; }
-    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; }
-    .hero-logo img { width: 100%; max-width: 520px; height: auto; display: block; margin-left: auto; }
-    .logo img, .hero-logo img, .foot-logo img { mix-blend-mode: lighten; }
-    .hero h1 { font-size: clamp(44px, 6vw, 76px); font-weight: 900; max-width: 13ch; }
-    .hero h1 em { font-style: normal; color: var(--accent); }
-    .hero p { font-size: clamp(17px, 2vw, 20px); color: var(--muted); max-width: 58ch; margin: 26px 0 36px; }
-    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero-points { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 44px; color: var(--muted); font-size: 15px; }
-    .hero-points span::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+    .hero .logo-img { width: 100%; max-width: 360px; margin: 0 auto 28px; }
+    .kicker { display: inline-block; font-family: "Archivo", sans-serif; font-weight: 900; font-size: clamp(30px, 5.4vw, 60px); color: var(--accent); text-transform: uppercase; letter-spacing: -.01em; line-height: 1; border-bottom: 4px solid var(--accent); padding-bottom: 4px; }
+    .hero h1 { font-size: clamp(40px, 6.6vw, 78px); font-weight: 900; max-width: 17ch; margin: 18px auto 0; }
+    .hero .sub { font-family: "Archivo", sans-serif; font-weight: 800; font-size: clamp(22px, 3.2vw, 34px); color: var(--accent); margin: 18px 0 36px; line-height: 1.15; }
+    .trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px; margin-top: 26px; color: var(--muted); font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .trust span::before { content: "✓ "; color: var(--accent); }
 
-    /* Problems */
-    .problems { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .problem { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
-    .problem b { display: block; font-family: "Archivo", sans-serif; font-size: 19px; margin-bottom: 8px; }
-    .problem p { color: var(--muted); font-size: 15px; }
-    .problem .x { color: var(--accent); font-weight: 700; font-size: 20px; display: block; margin-bottom: 10px; }
-
-    /* Services */
-    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; transition: transform .2s, border-color .2s; }
-    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
-    .card .icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(47,123,255,.14); color: var(--accent); display: grid; place-items: center; }
-    .card h3 { font-size: 24px; margin: 20px 0 10px; font-weight: 800; }
-    .card p { color: var(--muted); font-size: 15px; }
-    .card ul { list-style: none; margin-top: 16px; display: grid; gap: 8px; font-size: 15px; }
-    .card li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
-
-    /* Demo */
-    .demo { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
-    .demo ul { list-style: none; margin: 24px 0 32px; display: grid; gap: 12px; color: var(--muted); }
-    .demo li::before { content: "→ "; color: var(--accent); font-weight: 700; }
-    .browser { border-radius: 14px; border: 1px solid var(--line); overflow: hidden; background: var(--surface); box-shadow: 0 30px 80px -30px rgba(47,123,255,.35); }
-    .browser-bar { display: flex; gap: 6px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
-    .browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
-    .browser-body { padding: 28px; background: linear-gradient(160deg, #0f2550, #000 72%); min-height: 300px; }
-    .mock-h { font-family: "Archivo", sans-serif; font-weight: 900; font-size: 30px; line-height: 1.05; max-width: 12ch; }
-    .mock-p { color: var(--muted); font-size: 14px; margin: 12px 0 18px; }
-    .mock-btn { display: inline-block; background: var(--accent); color: #fff; font-weight: 600; font-size: 13px; padding: 9px 16px; border-radius: 999px; }
-    .mock-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 26px; }
-    .mock-row div { background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font-size: 12px; color: var(--muted); }
-    .mock-row b { display: block; color: var(--ink); font-size: 14px; }
-
-    /* Process */
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; counter-reset: step; }
-    .step { border-top: 2px solid var(--accent); padding-top: 20px; }
-    .step::before { counter-increment: step; content: "0" counter(step); font-family: "Archivo", sans-serif; font-weight: 800; color: var(--accent); }
-    .step h3 { font-size: 22px; margin: 8px 0; }
+    /* Steps */
+    .steps-section { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .step { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .step i { font-style: normal; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--accent); font-family: "Archivo", sans-serif; font-weight: 900; font-size: 20px; margin-bottom: 16px; }
+    .step h3 { font-size: 22px; margin-bottom: 8px; }
     .step p { color: var(--muted); font-size: 15px; }
 
-    /* Founding offer */
-    .offer-section { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .offer { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .offer-card { background: #fff; color: #000; border-radius: 22px; padding: 40px; position: relative; }
-    .offer-card .tag { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; text-transform: uppercase; letter-spacing: .08em; }
-    .offer-card h3 { font-size: 26px; margin: 18px 0 4px; }
-    .offer-card .price { font-family: "Archivo", sans-serif; font-weight: 900; font-size: 68px; line-height: 1; margin: 16px 0 6px; }
-    .offer-card .price small { font-size: 18px; color: #555; font-weight: 500; }
-    .offer-card .lock { color: #333; font-size: 15px; margin-bottom: 22px; }
-    .offer-card ul { list-style: none; display: grid; gap: 10px; margin-bottom: 28px; font-size: 15px; }
-    .offer-card li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
-    .offer-card .btn { display: block; text-align: center; }
-    .spots { display: flex; gap: 8px; margin: 26px 0 10px; }
-    .spots i { flex: 1; height: 10px; border-radius: 999px; background: var(--accent); }
-    .spots-label { color: var(--muted); font-size: 14px; }
+    /* Form */
+    .apply { max-width: 640px; margin: 0 auto; background: #fff; color: #0b0d12; border-radius: 22px; padding: 36px; }
+    .apply h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; }
+    .apply .note { text-align: center; color: #5a6270; margin: 8px 0 26px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fields .full { grid-column: 1 / -1; }
+    label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    input { width: 100%; font: inherit; font-size: 16px; padding: 14px 16px; border: 1.5px solid #d6dbe2; border-radius: 12px; background: #fff; color: #0b0d12; }
+    input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,123,255,.2); }
+    .apply .btn-trial { margin-top: 22px; box-shadow: none; }
+    .fine { text-align: center; color: #5a6270; font-size: 13px; margin-top: 14px; }
+    .form-msg { display: none; text-align: center; padding: 20px 0; }
+    .form-msg h3 { font-size: 30px; margin-bottom: 10px; }
+    .form-msg p { color: #5a6270; }
+    .form-error { display: none; color: #c4152b; text-align: center; font-size: 14px; margin-top: 12px; }
+    .hp { position: absolute; left: -9999px; }
 
     /* FAQ */
+    .faq { max-width: 760px; margin: 0 auto; }
     details { border-bottom: 1px solid var(--line); padding: 20px 0; }
     summary { cursor: pointer; font-weight: 600; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
     summary::-webkit-details-marker { display: none; }
     summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
     details[open] summary::after { content: "–"; }
-    details p { color: var(--muted); margin-top: 12px; max-width: 70ch; }
+    details p { color: var(--muted); margin-top: 12px; }
 
-    /* Final CTA */
-    .cta { background: var(--accent); color: #fff; border-radius: 24px; padding: 72px 32px; text-align: center; }
-    .cta h2 { font-size: clamp(34px, 5vw, 60px); font-weight: 900; max-width: 16ch; margin: 0 auto; }
-    .cta p { margin: 18px auto 32px; font-size: 18px; opacity: .9; max-width: 52ch; }
-    .cta-links { margin-top: 22px; font-size: 15px; opacity: .9; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; }
-    .cta-links a { text-decoration: underline; text-underline-offset: 3px; }
+    footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; }
+    footer .logo-img { width: 260px; margin: 0 auto 12px; }
+    footer .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 10px; }
+    footer a:hover { color: var(--ink); }
 
-    footer { padding: 48px 0; color: var(--muted); font-size: 14px; }
-    .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .foot div { display: flex; gap: 24px; flex-wrap: wrap; }
-    .foot a:hover { color: var(--ink); }
-
-    @media (max-width: 900px) {
-      .hero { padding-top: 40px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-      .hero-logo { order: -1; }
-      .hero-logo img { max-width: 360px; margin: 0 auto; }
-      nav { height: 84px; }
-      .logo img { height: 72px; }
-      .foot-logo img { height: 150px; }
-      .nav-links { display: none; }
-      .grid-3, .steps, .demo, .offer { grid-template-columns: 1fr; }
-      section { padding: 72px 0; }
-      .offer-card { padding: 30px 22px; }
-      .cta { padding: 52px 20px; }
+    @media (max-width: 760px) {
+      section { padding: 64px 0; }
+      nav { height: 72px; }
+      nav .logo-img { height: 60px; }
+      .hero { padding-top: 32px; }
+      .hero .logo-img { max-width: 260px; margin-bottom: 20px; }
+      .steps, .fields { grid-template-columns: 1fr; }
+      .apply { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -170,191 +115,127 @@
 
   <header>
     <nav class="wrap">
-      <a href="#" class="logo"><img src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343"></a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#offer">Founding offer</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <a href="https://calendly.com/getmore6marketing/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a free call</a>
+      <a href="#"><img class="logo-img" src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343"></a>
+      <a href="#apply" class="btn-sm">Start free trial</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-        <p class="eyebrow">For mobile &amp; auto detailers across the US</p>
-        <h1>We help detailers get <em>more booked jobs.</em></h1>
-        <p>You do great work. We make sure more people see it and book it. Get More6 runs your Meta ads, builds you a website that books jobs and tracks every call and booking, so your calendar stays full.</p>
-        <div class="hero-cta">
-          <a href="https://calendly.com/getmore6marketing/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a free call</a>
-          <a href="#services" class="btn btn-ghost">See what we do</a>
-        </div>
-        <div class="hero-points">
+      <div class="wrap">
+        <img class="logo-img" src="assets/logo.png" alt="Get More6 Marketing: more views, more leads, more growth" width="600" height="343">
+        <div class="kicker">Mobile detailers:</div>
+        <h1>Get more booked jobs from Facebook &amp; Instagram ads.</h1>
+        <p class="sub">Try it free for 7 days.</p>
+        <a href="#apply" class="btn-trial">
+          <b>Start your free 7-day trial</b>
+          <small>(Apply now · 30 seconds)</small>
+        </a>
+        <div class="trust">
           <span>Built only for detailers</span>
-          <span>Meta ads &amp; websites that book</span>
-          <span>Founding price: $500/month</span>
+          <span>You only pay the ad spend</span>
+          <span>No payment info needed</span>
         </div>
-        </div>
-        <div class="hero-logo"><img src="assets/logo.png" alt="Get More6 Marketing: more views, more leads, more growth" width="600" height="343"></div>
       </div>
     </section>
 
-    <section class="problems">
+    <section class="steps-section">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Sound familiar?</p>
-          <h2>Great work, but not enough customers.</h2>
-          <p>Most struggling detailers don't have a quality problem. They have a visibility problem.</p>
-        </div>
-        <div class="grid-3">
-          <div class="problem"><span class="x">01</span><b>Slow weeks you can't predict</b><p>Word of mouth is great until it stops. You need a steady flow of new customers, not hoping the phone rings.</p></div>
-          <div class="problem"><span class="x">02</span><b>No website, or one that doesn't book</b><p>People find you, can't see your prices or book a time, and go with the next detailer.</p></div>
-          <div class="problem"><span class="x">03</span><b>Ad money with nothing to show</b><p>You've boosted posts before, but couldn't tell if any of it turned into a single booked job.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">What we do</p>
-          <h2>Everything you need to fill your calendar.</h2>
-          <p>Everything works together: the ads bring car owners to you, the website turns them into bookings, and tracking shows you exactly what your money is bringing in.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></div>
-            <h3>Meta ads</h3>
-            <p>Facebook and Instagram ads aimed at car owners in your service area.</p>
-            <ul><li>Ads built around your best work</li><li>Targeted to your local area</li><li>Tracked to calls and bookings</li></ul>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></div>
-            <h3>Website design</h3>
-            <p>A fast, mobile-friendly website that turns visitors into booked jobs.</p>
-            <ul><li>Packages and prices up front</li><li>One tap to call, text or book</li><li>Looks great on every phone</li></ul>
-          </div>
-          <div class="card">
-            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
-            <h3>Booking tracking</h3>
-            <p>See exactly which ads bring in calls and booked jobs, so no dollar is a guess.</p>
-            <ul><li>Every call and booking tracked</li><li>Know your cost per booked job</li><li>Budget moved to what works</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="demo" style="padding-top:0">
-      <div class="wrap demo">
-        <div>
-          <p class="eyebrow">Websites for detailers</p>
-          <h2 style="font-size:clamp(32px,4.6vw,52px);font-weight:800">A website built to get you booked.</h2>
-          <ul>
-            <li>Your packages and prices, clear at a glance</li>
-            <li>One tap to call, text or book from a phone</li>
-            <li>Your service area and reviews to build trust fast</li>
-          </ul>
-          <a href="detailer-template/index.html" class="btn btn-ghost">See a sample detailer site</a>
-        </div>
-        <div class="browser" aria-hidden="true">
-          <div class="browser-bar"><i></i><i></i><i></i></div>
-          <div class="browser-body">
-            <div class="mock-h">Showroom shine, in your driveway.</div>
-            <div class="mock-p">Mobile detailing across your city. We bring the water and power.</div>
-            <span class="mock-btn">Book a detail</span>
-            <div class="mock-row">
-              <div><b>Express</b>from $89</div>
-              <div><b>Full Detail</b>from $189</div>
-              <div><b>Ceramic</b>from $499</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" style="padding-top:0">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">How it works</p>
-          <h2>From first call to a fuller calendar.</h2>
-        </div>
+        <div class="head"><h2>How the free trial works</h2></div>
         <div class="steps">
-          <div class="step"><h3>Book a free call</h3><p>We talk about your business, your area and where your customers are coming from today.</p></div>
-          <div class="step"><h3>We build your plan</h3><p>Your website, Meta ads and tracking, set up to bring in local customers who want a detail.</p></div>
-          <div class="step"><h3>You get more bookings</h3><p>You focus on detailing. We keep the ads running, the results tracked and the bookings coming.</p></div>
+          <div class="step"><i>1</i><h3>Apply in 30 seconds</h3><p>Tell us your name, business and city. We'll text or call you to get started.</p></div>
+          <div class="step"><i>2</i><h3>We launch your ads</h3><p>We build Facebook and Instagram ads around your best work and aim them at car owners near you.</p></div>
+          <div class="step"><i>3</i><h3>Get booked for 7 days</h3><p>Watch the calls and bookings come in. Our work is free for the week. You only pay Meta for the ads.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="offer" class="offer-section">
-      <div class="wrap offer">
-        <div>
-          <p class="eyebrow">Founding-client offer</p>
-          <h2 style="font-size:clamp(32px,4.6vw,54px);font-weight:800">Lock in our lowest price, for good.</h2>
-          <p style="color:var(--muted);margin-top:16px;font-size:18px">We're taking on our first five detailers at a founding-client price. Join now and your rate stays at $500 for as long as you stay with us. Once those five spots are filled, the price goes up.</p>
-          <div class="spots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="spots-label">Only 5 founding-client spots</div>
-        </div>
-        <div class="offer-card">
-          <span class="tag">Founding client</span>
-          <h3>Everything included</h3>
-          <div class="price">$500 <small>/month</small></div>
-          <div class="lock">Locked in for as long as you stay. Ad spend is paid separately to Meta.</div>
-          <ul>
-            <li>Meta ads management (Facebook &amp; Instagram)</li>
-            <li>Website design</li>
-            <li>Call and booking tracking</li>
-            <li>Price never goes up for founding clients</li>
-          </ul>
-          <a href="https://calendly.com/getmore6marketing/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a free call</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
+    <section id="apply">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">FAQ</p>
-          <h2>Questions detailers ask us.</h2>
-        </div>
-        <details><summary>Who do you work with?</summary><p>Mobile and auto detailing businesses anywhere in the US, especially ones that do great work but aren't getting enough clients yet.</p></details>
-        <details><summary>I'm a one-person operation. Is this for me?</summary><p>Yes. When you're the one doing the detailing, you don't have time to run ads, build a website and figure out what's working. That's exactly what we take off your plate.</p></details>
-        <details><summary>What does "founding-client pricing" mean?</summary><p>Our first five clients pay $500 a month, and that rate is locked in for as long as they stay with us. After those five spots are filled, the price goes up for new clients.</p></details>
-        <details><summary>Is the ad spend included?</summary><p>No. Your ad budget is paid directly to Meta (Facebook &amp; Instagram), separate from our $500 monthly fee. We'll help you pick a budget that fits your business on the free call.</p></details>
-        <details><summary>What happens on the free call?</summary><p>It's a 30-minute conversation about your business, your area and your goals. We'll show you where you're losing customers and how we'd help you get more booked jobs.</p></details>
-      </div>
-    </section>
-
-    <section id="contact" style="padding-top:0">
-      <div class="wrap">
-        <div class="cta">
-          <h2>Ready for more booked jobs?</h2>
-          <p>Book a free 30-minute call. Founding-client pricing is only available for the first five detailers.</p>
-          <a href="https://calendly.com/getmore6marketing/30min" target="_blank" rel="noopener" class="btn btn-white">Book a free call</a>
-          <div class="cta-links">
-            <a href="mailto:getmore6marketing@gmail.com">getmore6marketing@gmail.com</a>
-            <a href="https://www.instagram.com/gettmore6/" target="_blank" rel="noopener">@gettmore6 on Instagram</a>
+        <div class="apply">
+          <form id="trial-form" action="https://formsubmit.co/getmore6marketing@gmail.com" method="POST">
+            <h2>Claim your free 7-day trial</h2>
+            <p class="note">Takes 30 seconds. No payment info needed.</p>
+            <input type="hidden" name="_subject" value="New free trial request - Get More6">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://getmore6marketing.com/?applied=1#apply">
+            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="fields">
+              <div><label for="f-name">Your name</label><input id="f-name" name="Name" required autocomplete="name"></div>
+              <div><label for="f-biz">Business name</label><input id="f-biz" name="Business" required autocomplete="organization"></div>
+              <div><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" required autocomplete="tel"></div>
+              <div><label for="f-city">City &amp; state</label><input id="f-city" name="City" required placeholder="e.g. Fresno, CA"></div>
+              <div class="full"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" required autocomplete="email"></div>
+            </div>
+            <button type="submit" class="btn-trial"><b>Start my free trial</b></button>
+            <p class="form-error" id="form-error">Something went wrong. Please try again, or email getmore6marketing@gmail.com.</p>
+            <p class="fine">After 7 days, keep going for $500/month (founding price for our first 5 detailers), or stop. Your choice.</p>
+          </form>
+          <div class="form-msg" id="form-msg">
+            <h3>You're in! 🎉</h3>
+            <p>We got your request. We'll text or call you soon to get your free trial started.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="head"><h2>Questions</h2></div>
+        <div class="faq">
+          <details><summary>Is the trial really free?</summary><p>Yes. Our work is free for 7 days. The only cost is your ad budget, which you pay directly to Meta (Facebook &amp; Instagram). We'll help you pick a budget that fits.</p></details>
+          <details><summary>What happens after 7 days?</summary><p>If you want to keep going, it's $500 a month, and that founding price is locked in for our first five detailers. If not, we stop. No hard feelings.</p></details>
+          <details><summary>What do I get if I keep going?</summary><p>Your Meta ads keep running, plus a website built to get you booked and tracking that shows exactly which ads bring in calls and jobs.</p></details>
+          <details><summary>I'm a one-person operation. Is this for me?</summary><p>Yes. You focus on detailing. We handle the ads.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="center" style="padding-top:0">
+      <div class="wrap">
+        <a href="#apply" class="btn-trial">
+          <b>Start your free 7-day trial</b>
+          <small>(Apply now · 30 seconds)</small>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap foot">
-      <div class="foot-logo" style="display:block"><img src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343" loading="lazy"><span>© <span id="year"></span> Get More6. Marketing for detailers.</span></div>
-      <div>
+    <div class="wrap">
+      <img class="logo-img" src="assets/logo.png" alt="Get More6 Marketing" width="600" height="343" loading="lazy">
+      <div class="links">
         <a href="mailto:getmore6marketing@gmail.com">getmore6marketing@gmail.com</a>
-        <a href="https://www.instagram.com/gettmore6/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://calendly.com/getmore6marketing/30min" target="_blank" rel="noopener">Book a call</a>
+        <a href="https://www.instagram.com/gettmore6/" target="_blank" rel="noopener">@gettmore6 on Instagram</a>
+        <a href="detailer-template/index.html">Sample detailer website</a>
       </div>
+      <span>© <span id="year"></span> Get More6. Marketing for detailers.</span>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Send the trial form without leaving the page; falls back to a normal submit if this fails to load.
+    const form = document.getElementById('trial-form');
+    const done = () => { form.style.display = 'none'; document.getElementById('form-msg').style.display = 'block'; };
+    if (new URLSearchParams(location.search).has('applied')) done();
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit] b');
+      btn.textContent = 'Sending...';
+      document.getElementById('form-error').style.display = 'none';
+      try {
+        const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+          method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form)
+        });
+        if (!res.ok) throw new Error(res.status);
+        done();
+      } catch (err) {
+        btn.textContent = 'Start my free trial';
+        document.getElementById('form-error').style.display = 'block';
+      }
+    });
   </script>
 </body>
 </html>

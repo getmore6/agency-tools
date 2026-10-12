@@ -21,7 +21,9 @@ Tips:
 ## Get More6 site settings
 
 - Live site: https://getmore6marketing.com (served by GitHub Pages from this repo, so pushing to `main` updates it)
-- Booking: every "Book a free call" button links to https://calendly.com/getmore6marketing/30min
+- Free trial: every "Start free trial" button goes to the form on the homepage. Requests are emailed to getmore6marketing@gmail.com through FormSubmit (formsubmit.co). The very first request sends an activation email; click the link in it once.
+- Trial offer: 7 days free (client pays ad spend to Meta), then $500/month.
+- Calendly (no longer on the site): https://calendly.com/getmore6marketing/30min
 - Email: getmore6marketing@gmail.com
 - Instagram: https://www.instagram.com/gettmore6/
 - Founding offer: $500/month (ad spend paid separately by the client), first five clients. Edit the "Founding-client offer" section of index.html when the spots fill up.
