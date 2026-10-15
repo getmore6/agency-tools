@@ -38,7 +38,7 @@
     .logo-img { mix-blend-mode: lighten; display: block; height: auto; }
 
     /* Header */
-    header { position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    header { position: sticky; top: 0; z-index: 10; background: #000; border-bottom: 1px solid var(--line); }
     nav { display: flex; align-items: center; justify-content: space-between; height: 84px; }
     nav .logo-img { height: 72px; width: auto; }
     .btn-sm { background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; padding: 11px 18px; border-radius: 999px; transition: background .15s; }
@@ -69,22 +69,12 @@
     .step h3 { font-size: 22px; margin-bottom: 8px; }
     .step p { color: var(--muted); font-size: 15px; }
 
-    /* Form */
-    .apply { max-width: 640px; margin: 0 auto; background: #fff; color: #0b0d12; border-radius: 22px; padding: 36px; }
+    /* Booking calendar (GoHighLevel embed) */
+    .apply { max-width: 860px; margin: 0 auto; background: #fff; color: #0b0d12; border-radius: 22px; padding: 36px 24px 20px; }
     .apply h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; text-align: center; }
-    .apply .note { text-align: center; color: #5a6270; margin: 8px 0 26px; }
-    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .fields .full { grid-column: 1 / -1; }
-    label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    input { width: 100%; font: inherit; font-size: 16px; padding: 14px 16px; border: 1.5px solid #d6dbe2; border-radius: 12px; background: #fff; color: #0b0d12; }
-    input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(47,123,255,.2); }
-    .apply .btn-trial { margin-top: 22px; box-shadow: none; }
-    .fine { text-align: center; color: #5a6270; font-size: 13px; margin-top: 14px; }
-    .form-msg { display: none; text-align: center; padding: 20px 0; }
-    .form-msg h3 { font-size: 30px; margin-bottom: 10px; }
-    .form-msg p { color: #5a6270; }
-    .form-error { display: none; color: #c4152b; text-align: center; font-size: 14px; margin-top: 12px; }
-    .hp { position: absolute; left: -9999px; }
+    .apply .note { text-align: center; color: #5a6270; margin: 8px auto 20px; max-width: 46ch; }
+    .apply iframe { display: block; width: 100%; min-height: 640px; border: none; overflow: hidden; }
+    .fine { text-align: center; color: #5a6270; font-size: 13px; margin-top: 12px; }
 
     /* FAQ */
     .faq { max-width: 760px; margin: 0 auto; }
@@ -106,8 +96,8 @@
       nav .logo-img { height: 60px; }
       .hero { padding-top: 32px; }
       .hero .logo-img { max-width: 260px; margin-bottom: 20px; }
-      .steps, .fields { grid-template-columns: 1fr; }
-      .apply { padding: 28px 20px; }
+      .steps { grid-template-columns: 1fr; }
+      .apply { padding: 28px 8px 16px; border-radius: 18px; }
     }
   </style>
 </head>
@@ -129,7 +119,7 @@
         <p class="sub">Try it free for 7 days.</p>
         <a href="#apply" class="btn-trial">
           <b>Start your free 7-day trial</b>
-          <small>(Apply now · 30 seconds)</small>
+          <small>(Apply &amp; book your call)</small>
         </a>
         <div class="trust">
           <span>Built only for detailers</span>
@@ -143,7 +133,7 @@
       <div class="wrap">
         <div class="head"><h2>How the free trial works</h2></div>
         <div class="steps">
-          <div class="step"><i>1</i><h3>Apply in 30 seconds</h3><p>Tell us your name, business and city. We'll text or call you to get started.</p></div>
+          <div class="step"><i>1</i><h3>Apply &amp; book a call</h3><p>Answer a few quick questions and pick a time. On the call, we plan your ads together.</p></div>
           <div class="step"><i>2</i><h3>We launch your ads</h3><p>We build Facebook and Instagram ads around your best work and aim them at car owners near you.</p></div>
           <div class="step"><i>3</i><h3>Get booked for 7 days</h3><p>Watch the calls and bookings come in. Our work is free for the week. You only pay Meta for the ads.</p></div>
         </div>
@@ -153,28 +143,10 @@
     <section id="apply">
       <div class="wrap">
         <div class="apply">
-          <form id="trial-form" action="https://formsubmit.co/getmore6marketing@gmail.com" method="POST">
-            <h2>Claim your free 7-day trial</h2>
-            <p class="note">Takes 30 seconds. No payment info needed.</p>
-            <input type="hidden" name="_subject" value="New free trial request - Get More6">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://getmore6marketing.com/?applied=1#apply">
-            <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <div class="fields">
-              <div><label for="f-name">Your name</label><input id="f-name" name="Name" required autocomplete="name"></div>
-              <div><label for="f-biz">Business name</label><input id="f-biz" name="Business" required autocomplete="organization"></div>
-              <div><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" required autocomplete="tel"></div>
-              <div><label for="f-city">City &amp; state</label><input id="f-city" name="City" required placeholder="e.g. Fresno, CA"></div>
-              <div class="full"><label for="f-email">Email</label><input id="f-email" name="Email" type="email" required autocomplete="email"></div>
-            </div>
-            <button type="submit" class="btn-trial"><b>Start my free trial</b></button>
-            <p class="form-error" id="form-error">Something went wrong. Please try again, or email getmore6marketing@gmail.com.</p>
-            <p class="fine">After 7 days, keep going for $500/month (founding price for our first 5 detailers), or stop. Your choice.</p>
-          </form>
-          <div class="form-msg" id="form-msg">
-            <h3>You're in! 🎉</h3>
-            <p>We got your request. We'll text or call you soon to get your free trial started.</p>
-          </div>
+          <h2>Claim your free 7-day trial</h2>
+          <p class="note">Answer a few quick questions, then pick a time for a free call to get your trial started.</p>
+          <iframe src="https://api.getmore6marketing.com/widget/booking/FtJn9i9VG3UBvapUPjxm" allow="payment" scrolling="no" id="FtJn9i9VG3UBvapUPjxm_1792028530488" title="Apply and book your free trial call"></iframe>
+          <p class="fine">After 7 days, keep going for $500/month (founding price for our first 5 detailers), or stop. Your choice.</p>
         </div>
       </div>
     </section>
@@ -195,7 +167,7 @@
       <div class="wrap">
         <a href="#apply" class="btn-trial">
           <b>Start your free 7-day trial</b>
-          <small>(Apply now · 30 seconds)</small>
+          <small>(Apply &amp; book your call)</small>
         </a>
       </div>
     </section>
@@ -216,26 +188,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Send the trial form without leaving the page; falls back to a normal submit if this fails to load.
-    const form = document.getElementById('trial-form');
-    const done = () => { form.style.display = 'none'; document.getElementById('form-msg').style.display = 'block'; };
-    if (new URLSearchParams(location.search).has('applied')) done();
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type=submit] b');
-      btn.textContent = 'Sending...';
-      document.getElementById('form-error').style.display = 'none';
-      try {
-        const res = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
-          method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form)
-        });
-        if (!res.ok) throw new Error(res.status);
-        done();
-      } catch (err) {
-        btn.textContent = 'Start my free trial';
-        document.getElementById('form-error').style.display = 'block';
-      }
-    });
   </script>
+  <script src="https://api.getmore6marketing.com/js/form_embed.js"></script>
 </body>
 </html>
