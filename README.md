@@ -21,7 +21,7 @@ Tips:
 ## Get More6 site settings
 
 - Live site: https://getmore6marketing.com (served by GitHub Pages from this repo, so pushing to `main` updates it)
-- Free trial: every "Start free trial" button scrolls to the GoHighLevel booking calendar on the homepage ("Getmore6 strategy call"). The Detailer Application questions show first, then the time picker. Change the questions or calendar in GoHighLevel, not here.
+- Free trial: every "Start free trial" button opens the GoHighLevel booking page (https://api.getmore6marketing.com/widget/booking/FtJn9i9VG3UBvapUPjxm) in a new tab ("Getmore6 strategy call"). The Detailer Application questions show first, then the time picker. Change the questions or calendar in GoHighLevel, not here.
 - Trial offer: 7 days free (client pays ad spend to Meta), then $500/month.
 - Calendly (no longer on the site): https://calendly.com/getmore6marketing/30min
 - Email: getmore6marketing@gmail.com
