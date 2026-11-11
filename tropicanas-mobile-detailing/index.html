@@ -228,6 +228,9 @@
     .foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
     .foot-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .foot-links a:hover { color: var(--ink); }
+    .foot-credit { margin-top: 8px; font-weight: 700; color: #e5383b; }
+    .foot-credit a { color: #e5383b; text-decoration: underline; text-underline-offset: 3px; }
+    .foot-credit a:hover { color: #ff5a5d; }
 
     /* Mobile call bar */
     .callbar { display: none; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; gap: 10px; padding: 10px; border-radius: 999px; background: rgba(23,20,15,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--line); }
@@ -558,7 +561,7 @@
 
   <footer>
     <div class="wrap foot">
-      <div><div class="foot-brand"><img class="logo-helmet" src="img/logo-helmet.png" alt="" width="405" height="458" loading="lazy"><img class="foot-logo" src="img/logo-wordmark.png" alt="Tropicanas" width="862" height="157" loading="lazy"></div>©<span id="yr"></span> Tropicanas Mobile Detailing LLC · Las Vegas, NV</div>
+      <div><div class="foot-brand"><img class="logo-helmet" src="img/logo-helmet.png" alt="" width="405" height="458" loading="lazy"><img class="foot-logo" src="img/logo-wordmark.png" alt="Tropicanas" width="862" height="157" loading="lazy"></div>©<span id="yr"></span> Tropicanas Mobile Detailing LLC · Las Vegas, NV<div class="foot-credit">Ran by <a href="https://getmore6marketing.com" target="_blank" rel="noopener">Get More6</a></div></div>
       <div class="foot-links">
         <a href="#pricing">Pricing</a>
         <a data-ig href="#">Instagram</a>
