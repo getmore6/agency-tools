@@ -566,8 +566,20 @@
   <script>
     (function () {
       const tel = "tel:+1" + SITE.phoneRaw;
-      const sms = (pkg) => "sms:+1" + SITE.phoneRaw + "?&body=" + encodeURIComponent(
-        "Hi Tropicanas! I'd like to book a detail" + (pkg ? " (" + pkg + ")" : "") + ". My vehicle is: ___ and my address is: ___");
+      // Opens the Messages app with Tropicanas' number already in the "To" field.
+      // iPhone/iPad and Android expect different formats for the pre-filled message,
+      // and desktop Messages gets the number only (a body there can break the recipient).
+      const ua = navigator.userAgent;
+      const isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/.test(ua);
+      const sms = (pkg) => {
+        const num = "sms:+1" + SITE.phoneRaw;
+        const body = encodeURIComponent("Hi Tropicanas! I'd like to book a detail" +
+          (pkg ? " (" + pkg + ")" : "") + ". My vehicle is: ___ and my address is: ___");
+        if (isIOS) return num + "&body=" + body;
+        if (isAndroid) return num + "?body=" + body;
+        return num;
+      };
 
       document.querySelectorAll("[data-call]").forEach(a => a.href = tel);
       document.querySelectorAll("[data-phone]").forEach(el => el.textContent = SITE.phone);
