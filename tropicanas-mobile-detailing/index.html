@@ -81,6 +81,11 @@
     main, footer { position: relative; z-index: 1; }
     .nav-links { display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: rgba(246,241,231,.72); }
     .nav-links a:hover { color: var(--ink); }
+    .nav-links a { white-space: nowrap; }
+    @media (max-width: 1180px) { .nav-links { gap: 22px; } }
+    /* Below this width the five menu links no longer fit on one line beside the logo and button,
+       so hide them (the Book a Detail button stays). */
+    @media (max-width: 1040px) { .nav-links { display: none; } }
     nav .btn { padding: 12px 22px; font-size: 14px; }
 
     /* Hero */
