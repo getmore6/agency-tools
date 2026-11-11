@@ -67,6 +67,9 @@
 
     /* Header */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; transition: background .25s, border-color .25s; border-bottom: 1px solid transparent; }
+    .top-credit { text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .04em; padding: 6px 16px; color: #e5383b; background: rgba(10,9,7,.9); border-bottom: 1px solid rgba(229,56,59,.25); }
+    .top-credit a { color: #e5383b; text-decoration: underline; text-underline-offset: 3px; }
+    .top-credit a:hover { color: #ff5a5d; }
     header.scrolled { background: rgba(10,9,7,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
     nav { display: flex; align-items: center; justify-content: space-between; height: 82px; gap: 20px; }
     .logo { display: flex; align-items: center; gap: 12px; }
@@ -289,6 +292,7 @@
   <canvas id="rain" aria-hidden="true"></canvas>
 
   <header id="top">
+    <div class="top-credit">Ran by <a href="https://getmore6marketing.com" target="_blank" rel="noopener">Get More6</a></div>
     <div class="wrap">
       <nav>
         <a class="logo" href="#top" aria-label="Tropicanas Mobile Detailing home">
