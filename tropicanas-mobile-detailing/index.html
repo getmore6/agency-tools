@@ -80,7 +80,7 @@
     .final-logo { height: clamp(54px, 9vw, 86px); width: auto; margin: 0 auto; filter: drop-shadow(0 6px 24px rgba(227,181,74,.3)); }
     .final-helmet { height: clamp(78px, 11vw, 112px); width: auto; margin: 6px auto 28px; filter: drop-shadow(0 8px 28px rgba(227,181,74,.3)); }
 
-    /* Falling water drops */
+    /* Falling helmet logos */
     #rain { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
     main, footer { position: relative; z-index: 1; }
     .nav-links { display: flex; gap: 32px; font-size: 14px; font-weight: 600; color: rgba(246,241,231,.72); }
@@ -617,22 +617,27 @@
       } else els.forEach(el => el.classList.add("in"));
     })();
 
-    /* Falling water drops behind the page */
+    /* Tropicanas helmet logos drifting down behind the page */
     (function () {
       const c = document.getElementById("rain");
       const ctx = c.getContext("2d");
       const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      let W, H, dpr, drops = [];
+      const logo = new Image();
+      logo.src = "img/logo-helmet.png";
+      const ratio = 458 / 405;                         // helmet height / width
+      let W, H, dpr, items = [];
 
       function make(initial) {
         const z = Math.random();                       // depth: 0 = far, 1 = near
+        const w = 18 + z * 30;                         // logo width in px
         return {
           x: Math.random() * W,
-          y: initial ? Math.random() * H : -40 - Math.random() * H * 0.5,
-          r: 2.2 + z * 5,                              // drop radius
-          v: 0.6 + z * 2.4,                            // fall speed
-          a: 0.12 + z * 0.38,                          // opacity
-          gold: Math.random() < 0.28,
+          y: initial ? Math.random() * H : -w * ratio - Math.random() * H * 0.4,
+          w,
+          v: 0.25 + z * 0.65,                          // fall speed
+          a: 0.07 + z * 0.16,                          // opacity
+          rot: (Math.random() - 0.5) * 0.5,
+          spin: (Math.random() - 0.5) * 0.004,
           sway: Math.random() * Math.PI * 2,
         };
       }
@@ -642,50 +647,35 @@
         W = window.innerWidth; H = window.innerHeight;
         c.width = W * dpr; c.height = H * dpr;
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        const n = W < 760 ? 28 : 60;
-        drops = Array.from({ length: n }, () => make(true));
-      }
-
-      function drawDrop(d) {
-        const { x, y, r } = d;
-        const tint = d.gold ? "245,210,122" : "214,232,255";
-        // faint trail
-        const tail = r * (6 + d.v * 3);
-        const tg = ctx.createLinearGradient(x, y - tail, x, y);
-        tg.addColorStop(0, `rgba(${tint},0)`);
-        tg.addColorStop(1, `rgba(${tint},${d.a * 0.35})`);
-        ctx.strokeStyle = tg; ctx.lineWidth = r * 0.5;
-        ctx.beginPath(); ctx.moveTo(x, y - tail); ctx.lineTo(x, y - r); ctx.stroke();
-        // teardrop body
-        ctx.beginPath();
-        ctx.moveTo(x, y - r * 2.6);
-        ctx.bezierCurveTo(x + r * 0.35, y - r * 1.6, x + r, y - r * 0.6, x + r, y);
-        ctx.arc(x, y, r, 0, Math.PI);
-        ctx.bezierCurveTo(x - r, y - r * 0.6, x - r * 0.35, y - r * 1.6, x, y - r * 2.6);
-        const g = ctx.createRadialGradient(x - r * 0.35, y - r * 0.3, r * 0.1, x, y, r * 1.4);
-        g.addColorStop(0, `rgba(255,255,255,${Math.min(1, d.a * 1.8)})`);
-        g.addColorStop(0.45, `rgba(${tint},${d.a})`);
-        g.addColorStop(1, `rgba(${tint},${d.a * 0.15})`);
-        ctx.fillStyle = g; ctx.fill();
+        const n = W < 760 ? 10 : 22;
+        items = Array.from({ length: n }, () => make(true));
       }
 
       function frame() {
         ctx.clearRect(0, 0, W, H);
-        for (let i = 0; i < drops.length; i++) {
-          const d = drops[i];
-          d.v += 0.012;                                // gentle gravity
-          d.y += d.v;
-          d.sway += 0.01;
-          d.x += Math.sin(d.sway) * 0.15;
-          if (d.y - d.r * 3 > H) drops[i] = make(false);
-          drawDrop(d);
+        for (let i = 0; i < items.length; i++) {
+          const d = items[i];
+          const h = d.w * ratio;
+          if (!still) {
+            d.y += d.v;
+            d.sway += 0.008;
+            d.x += Math.sin(d.sway) * 0.2;
+            d.rot += d.spin;
+          }
+          if (d.y - h > H) items[i] = make(false);
+          ctx.save();
+          ctx.globalAlpha = d.a;
+          ctx.translate(d.x, d.y);
+          ctx.rotate(d.rot);
+          ctx.drawImage(logo, -d.w / 2, -h / 2, d.w, h);
+          ctx.restore();
         }
         if (!still) requestAnimationFrame(frame);
       }
 
       resize();
       window.addEventListener("resize", resize);
-      frame();
+      if (logo.complete) frame(); else logo.onload = frame;
     })();
   </script>
 </body>
